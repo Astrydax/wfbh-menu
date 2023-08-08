@@ -1,7 +1,18 @@
 import React from 'react';
 import { useState } from 'react';
+import Data from "../data.json";
 
 function Adder({data}) {
+    const [menuData, setMenuData] = useState(data);
+
+    const[category, setCategory] = useState("");
+    const handleCategoryChange = (e) => {
+        console.log(e.target.value)
+    }
+
+
+
+
     return (
         <div className={"adder"}>
             <form>
@@ -9,7 +20,11 @@ function Adder({data}) {
                     Add new item
                 </h2>
                 <div className="input-group">
-                    <input type="text" placeholder={"Choose a catagory"}/>
+                    <select onChange={handleCategoryChange}>
+                        <option value="">Choose A Category</option>
+
+                        {menuData.categories.map((cat) => <option key={cat.id} value={cat.title}>{cat.title}</option>)}
+                    </select>
                 </div>
             </form>
         </div>

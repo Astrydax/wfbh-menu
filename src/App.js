@@ -2,10 +2,11 @@ import logo from './images/Banner-Logo.png';
 import Catagory from "./Components/Catagory";
 import Adder from "./Components/Adder";
 import React, {useState} from "react";
-import Data from "./data.json";
+import Data from "./db.json";
 
 function App() {
     const [menuData, setMenuData] = useState(Data);
+    console.log(menuData.categories)
 
   return (
     <div className="App">
@@ -14,8 +15,8 @@ function App() {
         <div id="main" className={"row"}>
             <div className="column"> boop</div>
             <div className="column">
-                {menuData.rightColumn.map((item) => (
-                    <Catagory key={item.id} catagoryData={item}/>
+                {menuData.categories.map((cat) => (
+                    <Catagory key={cat.id} catagoryData={cat} menuData={menuData}/>
                 ))}
             </div>
         </div>
