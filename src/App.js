@@ -6,11 +6,14 @@ import Data from "./db.json";
 
 function App() {
     const [menuData, setMenuData] = useState(Data);
-    console.log(menuData.categories)
+
+    const addItem = (newItem) => {
+        console.log(newItem)
+    }
 
   return (
     <div className="App">
-        <Adder className="adder" data={menuData}></Adder>
+        <Adder className="adder" data={menuData} handleAddItem={addItem}></Adder>
         <img id={"banner"} src={logo} alt=""/>
         <div id="main" className={"row"}>
             <div className="column"> boop</div>

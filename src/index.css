@@ -64,19 +64,31 @@ div.item-details.row > img{
   max-height: 10vh;
 }
 
+
+
 .adder{
   position: absolute;
   top: 0px;
   left: 50%;
   transform: translate(-50%, 0);
-  z-index: 1;
+  z-index: 3;
   background: white;
   padding: 10px;
 }
 
 .input{
-  margin-top: 5px;
-  margin-bottom: 5px;
+  align-items: center;
+  text-align: center;
+  display: block;
+  padding: 2px;
+  border-width: 1px;
+  border-style: solid;
+  margin: 20px;
+}
+
+.error-message{
+  margin: 20px;
+  color: red;
 }
 
 
