@@ -1,0 +1,54 @@
+{
+  "leftColumn": [
+        {
+          "id": 0,
+          "title": "Doughnuts",
+          "items": [{
+            "name": "Sprinkle",
+            "price": "$3.25",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis diam diam, non suscipit lectus porta in. Integer eu ullamcorper elit. Vivamus in orci vitae mauris eleifend varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos",
+            "image": "https://media.istockphoto.com/id/538335769/photo/donut-with-sprinkles-isolated.jpg?s=612x612&w=0&k=20&c=rCA_fEe8H3qwXT20aYfRJTrMHpSB8deFuiKK0ygQLwg="
+
+          }]
+        }
+  ],
+  "rightColumn": [
+    {
+          "id": 0,
+          "title": "Doughnuts",
+          "items": [{
+            "id": 0,
+            "name": "ring",
+            "price": "$4.85",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis diam diam, non suscipit lectus porta in. Integer eu ullamcorper elit. Vivamus in orci vitae mauris eleifend varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos",
+            "image": "https://natashaskitchen.com/wp-content/uploads/2021/05/Glazed-Donuts-SQ.jpg"
+
+          },{
+            "id": 1,
+            "name": "Eclair",
+            "price": "$7.85",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis diam diam, non suscipit lectus porta in. Integer eu ullamcorper elit. Vivamus in orci vitae mauris eleifend varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos",
+            "image": "https://www.lavenderandmacarons.com/wp-content/uploads/2022/12/french-chocolate-eclairs-recipe.jpg"
+
+          }]
+    },{
+      "id": 1,
+      "title": "Sandwiches",
+      "items": [{
+        "id": 0,
+        "name": "BLT",
+        "price": "$10.85",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis diam diam, non suscipit lectus porta in. Integer eu ullamcorper elit. Vivamus in orci vitae mauris eleifend varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos",
+        "image": "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2021-05-beach-sandwich%2F2021-05-12_ATK1018"
+
+      },{
+        "id": 1,
+        "name": "Chicken Salad Sandwich",
+        "price": "$12.85",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis diam diam, non suscipit lectus porta in. Integer eu ullamcorper elit. Vivamus in orci vitae mauris eleifend varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos",
+        "image": "https://bellyfull.net/wp-content/uploads/2022/01/Chicken-Salad-blog-3.jpg"
+
+      }]
+    }
+  ]
+}

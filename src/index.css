@@ -5,9 +5,80 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to top, #544578, #675685, #796892, #8b7a9f, #9d8dad);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#banner{
+  position: absolute;
+  top: 0.5vh;
+  left: 15vw;
+  right: 1500vw;
+  width: 70%;
+  max-height: 9.5vh;
+}
+
+#main {
+  margin: 1%;
+  margin-top: 11vh;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.item-name{
+  margin-bottom: 0;
+}
+
+.item-details{
+  display: block;
+}
+
+.item-description{
+  font-size: 1.2em;
+}
+
+.item-price{
+  font-size: 1.2em;
+  vertical-align: text-bottom;
+}
+
+div.item-details.row > img{
+  max-height: 10vh;
+}
+
+.adder{
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  background: white;
+  padding: 2%;
+}
+
+
+
+
+
+
+
+
+

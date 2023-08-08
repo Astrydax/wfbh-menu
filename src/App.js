@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './images/Banner-Logo.png';
+import Catagory from "./Components/Catagory";
+import Adder from "./Components/Adder";
+import React, {useState} from "react";
+import Data from "./data.json";
 
 function App() {
+    const [menuData, setMenuData] = useState(Data);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Adder className="adder" data={menuData}></Adder>
+        <img id={"banner"} src={logo} alt=""/>
+        <div id="main" className={"row"}>
+            <div className="column"> boop</div>
+            <div className="column">
+                {menuData.rightColumn.map((item) => (
+                    <Catagory key={item.id} catagoryData={item}/>
+                ))}
+            </div>
+        </div>
     </div>
   );
 }
