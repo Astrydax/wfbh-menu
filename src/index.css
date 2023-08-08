@@ -71,7 +71,12 @@ div.item-details.row > img{
   transform: translate(-50%, 0);
   z-index: 1;
   background: white;
-  padding: 2%;
+  padding: 10px;
+}
+
+.input{
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 
