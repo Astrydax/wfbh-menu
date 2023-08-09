@@ -1,4 +1,5 @@
 import logo from './images/Banner-Logo.png';
+import {v4 as uuidv4} from 'uuid'
 import Catagory from "./Components/Catagory";
 import Adder from "./Components/Adder";
 import React, {useState} from "react";
@@ -8,7 +9,8 @@ function App() {
     const [menuData, setMenuData] = useState(Data);
 
     const addItem = (newItem) => {
-        console.log(newItem)
+        newItem.id = uuidv4();
+        setMenuData( current=> ({...current, items: [...current.items, newItem]}));
     }
 
   return (
