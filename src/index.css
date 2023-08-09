@@ -73,7 +73,6 @@ div.item-details.row > img{
   transform: translate(-50%, 0);
   z-index: 3;
   background: white;
-  padding: 10px;
 }
 
 .input{
@@ -91,6 +90,19 @@ div.item-details.row > img{
   color: red;
 }
 
+#close-item-adder-btn{
+display: block;
+  margin-left: 85%;
+  margin-top: 5%;
+}
+
+#fileuploader{
+  position: absolute;
+  top: 0px;
+  left: 5%;
+  z-index: 3;
+  background: white;
+}
 
 
 
