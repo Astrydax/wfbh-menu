@@ -3,8 +3,7 @@ import {useState} from 'react';
 import Button from "./shared/Button";
 
 
-function Adder({data, handleAddItem}) {
-    const [menuData, setMenuData] = useState(data);
+function Adder({menuData, setMenuData, handleAddItem}) {
     const [opened, setOpened] = useState(true)
 
     const [category, setCategory] = useState("");
@@ -80,7 +79,7 @@ function Adder({data, handleAddItem}) {
         <div>
             {opened && (<div className={"adder"}>
                 <form onSubmit={handleSubmit}>
-                    <button id={"close-item-adder-btn"}
+                    <button type={"button"} id={"close-item-adder-btn"}
                             onClick={() => setOpened(false)}>X
                     </button>
                     <h2 style={{textAlign: "center"}}>

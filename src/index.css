@@ -69,6 +69,15 @@ div.item-details.row > img{
 .adder{
   position: absolute;
   top: 0px;
+  left: 85%;
+  transform: translate(-50%, 0);
+  z-index: 3;
+  background: white;
+}
+
+#category-adder{
+  position: absolute;
+  top: 0px;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 3;
@@ -91,9 +100,8 @@ div.item-details.row > img{
 }
 
 #close-item-adder-btn{
-display: block;
   margin-left: 85%;
-  margin-top: 5%;
+  margin-bottom: 0;
 }
 
 #fileuploader{
@@ -104,6 +112,10 @@ display: block;
   background: white;
 }
 
+.ui{
+  position: relative;
+  z-index: 3;
+}
 
 
 

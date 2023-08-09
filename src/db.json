@@ -1,23 +1,7 @@
 {
   "categories": [
-    {
-      "id": 0,
-      "title": "test",
-      "column": 0
-    },
-    {
-      "id": 1,
-      "title": "one",
-      "column": 0
-    },
-    {
-      "id": 2,
-      "title": "two",
-      "column": 0
-    }
   ],
   "items": [
-
   ]
 }
 

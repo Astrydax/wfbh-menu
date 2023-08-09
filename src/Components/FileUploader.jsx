@@ -36,7 +36,7 @@ function FileUploader({menuData, setMenuData}) {
     return (
         <div>
             {opened && (<div id="fileuploader">
-                <button id={"close-item-adder-btn"}
+                <button type={"button"} id={"close-item-adder-btn"}
                         onClick={() => setOpened(false)}>X
                 </button>
                 <form>
