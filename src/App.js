@@ -15,6 +15,8 @@ import React, {useState, useEffect} from "react";
         add support for multiple screens  
  */
 
+//
+
 //NOTES: on bug with input form not updating https://www.udemy.com/course/react-front-to-back-2022/learn/lecture/29769170#questions/16591110
 
 function App() {
@@ -75,12 +77,12 @@ function App() {
             <div id="main" className={"row"}>
                 <div className="column">
                     {menuData.categories.filter(cat => cat.column == 1).map((cat) => (
-                        <Catagory key={cat.id} catagoryData={cat} menuData={menuData}/>
+                        <Catagory key={cat.id} categoryData={cat} menuData={menuData}/>
                     ))}
                 </div>
                 <div className="column">
                     {menuData.categories.filter(cat => cat.column == 2).map((cat) => (
-                        <Catagory key={cat.id} catagoryData={cat} menuData={menuData}/>
+                        <Catagory key={cat.id} categoryData={cat} menuData={menuData}/>
                     ))}
                 </div>
             </div>
