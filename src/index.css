@@ -12,6 +12,18 @@ body {
   background-attachment: fixed;
 }
 
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+
+h1,h2,h3,h4{
+  font-family: 'Lato', sans-serif;
+}
+
+p{
+  font-family: 'Lato', sans-serif;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -36,7 +48,6 @@ code {
   width: 50%;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
@@ -115,6 +126,11 @@ div.item-details.row > img{
 .ui{
   position: relative;
   z-index: 3;
+}
+
+.category{
+  text-align: center;
+  color: #423461;
 }
 
 

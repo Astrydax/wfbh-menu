@@ -5,7 +5,7 @@ function MenuItem({itemData}) {
     return (
         <div>
             <div className={"row"}>
-                <h3 className={"item-name column"}>{itemData.name}</h3>
+                <h3 className={"item-name column lato"}>{itemData.name}</h3>
                 <p className={"column item-price"}>{itemData.price}</p>
             </div>
 
