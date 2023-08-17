@@ -53,6 +53,23 @@ function App() {
 
     }, [menuData])
 
+    const deleteItem = (itemId) => {
+        if (window.confirm("Are you sure you want to delete this item?")) {
+            setMenuData(current => ({
+                ...current,
+                items: current.items.filter(item => item.id !== itemId)
+            }));
+        }
+    }
+    const deleteCategory = (categoryId) => {
+        if (window.confirm("Are you sure you want to delete this category?")) {
+            setMenuData(current => ({
+                ...current,
+                categories: current.categories.filter(category => category.id !== categoryId)
+            }));
+        }
+    }
+
 
     return (
         <div className="App">
@@ -75,12 +92,12 @@ function App() {
             <div id="main" className={"row"}>
                 <div className="column">
                     {menuData.categories.filter(cat => cat.column == 1).map((cat) => (
-                        <Catagory key={cat.id} catagoryData={cat} menuData={menuData}/>
+                        <Catagory key={cat.id} catagoryData={cat} menuData={menuData} deleteItem={deleteItem} deleteCategory={deleteCategory}/>
                     ))}
                 </div>
                 <div className="column">
                     {menuData.categories.filter(cat => cat.column == 2).map((cat) => (
-                        <Catagory key={cat.id} catagoryData={cat} menuData={menuData}/>
+                        <Catagory key={cat.id} catagoryData={cat} menuData={menuData} deleteCategory={deleteCategory} deleteItem={deleteItem}/>
                     ))}
                 </div>
             </div>

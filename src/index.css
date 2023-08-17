@@ -54,12 +54,20 @@ code {
   clear: both;
 }
 
-.item-name{
-  margin-bottom: 0;
+.menu-item{
+  margin: 2%;
+  background: rgba(0,0,0,.01);
 }
 
 .item-details{
-  display: block;
+  display: flex;
+  margin: auto;
+}
+
+.item-name{
+
+  margin-bottom: 0;
+  margin-left: auto;
 }
 
 .item-description{
@@ -71,8 +79,9 @@ code {
   vertical-align: text-bottom;
 }
 
-div.item-details.row > img{
+.item-image{
   max-height: 10vh;
+  margin: auto;
 }
 
 
