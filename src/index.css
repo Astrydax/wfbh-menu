@@ -38,9 +38,9 @@ code {
   max-height: 9.5vh;
 }
 
-#main {
+#content-main {
   margin: 1%;
-  margin-top: 11vh;
+  padding-top: 11vh;
 }
 
 .column {
@@ -98,8 +98,16 @@ code {
 #category-adder{
   position: absolute;
   top: 0px;
-  left: 50%;
+  left: 60%;
   transform: translate(-50%, 0);
+  z-index: 3;
+  background: white;
+}
+
+#screen-selector{
+  position: absolute;
+  top: 0px;
+  left: 1%;
   z-index: 3;
   background: white;
 }
@@ -127,7 +135,7 @@ code {
 #fileuploader{
   position: absolute;
   top: 0px;
-  left: 5%;
+  left: 15%;
   z-index: 3;
   background: white;
 }
