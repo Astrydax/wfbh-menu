@@ -4,15 +4,13 @@ import Catagory from "./Components/Catagory";
 import Adder from "./Components/Adder";
 import FileUploader from "./Components/FileUploader";
 import CategoryAdder from "./Components/CategoryAdder";
+import ScreenSelector from "./Components/ScreenSelector";
 import Draggable from "react-draggable";
 import React, {useState, useEffect} from "react";
 // import Data from "./db.json";
 
-/*TODO: add support for columns 1-4
-        add option to set screen to secondary, columns 3-4
-        make a way to remove items from the list
+/*TODO:
         stylize and pretify
-        add support for multiple screens  
  */
 
 //NOTES: on bug with input form not updating https://www.udemy.com/course/react-front-to-back-2022/learn/lecture/29769170#questions/16591110
@@ -24,6 +22,7 @@ function App() {
     }
 
     const [menuData, setMenuData] = useState(Data);
+    const [screenNumber, setScreenNumber] = useState(1);
 
 
     const addItem = (newItem) => {
@@ -71,6 +70,28 @@ function App() {
     }
 
 
+    function filterFunc(cat, screenColumnNumber) {
+        if(screenColumnNumber === 1){
+            if(screenNumber == 1){
+                return cat.column == 1;
+            }else{
+                if(screenNumber == 2){
+                    return cat.column == 3
+                }
+            }
+        } else if(screenColumnNumber === 2){
+            if(screenNumber == 1){
+                return cat.column == 2;
+            }else{
+                if(screenNumber == 2){
+                    return cat.column == 4
+                }
+            }
+        }
+
+        return undefined;
+    }
+
     return (
         <div className="App">
 
@@ -78,7 +99,13 @@ function App() {
                 <div className={"ui"}>
                     <FileUploader menuData={menuData} setMenuData={setMenuData}/>
                 </div>
-            </Draggable> <Draggable>
+            </Draggable>
+            <Draggable>
+                <div className={"ui"}>
+                    <ScreenSelector setScreenNumber={setScreenNumber}/>
+                </div>
+            </Draggable>
+            <Draggable>
             <div className={"ui"}>
                 <CategoryAdder handleAddCategory={addCategory}/>
             </div>
@@ -89,14 +116,14 @@ function App() {
             </Draggable>
 
             <img id={"banner"} src={logo} alt=""/>
-            <div id="main" className={"row"}>
+            <div id="content-main" className={"row"}>
                 <div className="column">
-                    {menuData.categories.filter(cat => cat.column == 1).map((cat) => (
+                    {menuData.categories.filter(cat => filterFunc(cat, 1)).map((cat) => (
                         <Catagory key={cat.id} catagoryData={cat} menuData={menuData} deleteItem={deleteItem} deleteCategory={deleteCategory}/>
                     ))}
                 </div>
                 <div className="column">
-                    {menuData.categories.filter(cat => cat.column == 2).map((cat) => (
+                    {menuData.categories.filter(cat => filterFunc(cat, 2)).map((cat) => (
                         <Catagory key={cat.id} catagoryData={cat} menuData={menuData} deleteCategory={deleteCategory} deleteItem={deleteItem}/>
                     ))}
                 </div>
